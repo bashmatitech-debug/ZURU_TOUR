@@ -5,7 +5,7 @@ import { FormEvent, useState } from "react";
 import { createClient } from "@/lib/supabase";
 
 export default function RegisterPage() {
-  const supabase = createClient();
+
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -15,6 +15,7 @@ export default function RegisterPage() {
 
   async function handleRegister(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+const supabase = createClient();
 
     setLoading(true);
     setMessage("");
