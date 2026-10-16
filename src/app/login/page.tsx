@@ -29,7 +29,7 @@ export default function LoginPage() {
               id="email"
               name="email"
               type="email"
-              placeholder="you@example.com"
+              placeholder="Your Email Required"
               className="w-full rounded-xl border px-4 py-3 outline-none focus:border-green-700"
               required
             />
