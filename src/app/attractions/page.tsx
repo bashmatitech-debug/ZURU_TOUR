@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { createServerSupabaseClient } from "@/lib/supabase-server";
 
-export default async function AttractionsPage() {
+export default async function attractionsPage() {
   const supabase = await createServerSupabaseClient();
 
   const { data: attractions, error } = await supabase
@@ -11,7 +11,7 @@ export default async function AttractionsPage() {
     .order("name", { ascending: true });
 
   if (error) {
-    console.error("Attractions database error:", error);
+    console.error("attractions database error:", error);
 
     return (
       <section className="mx-auto max-w-7xl px-6 py-16">
@@ -21,7 +21,7 @@ export default async function AttractionsPage() {
           </p>
 
           <h1 className="mt-2 text-3xl font-bold text-red-950">
-            Attractions are temporarily unavailable
+            attractions are temporarily unavailable
           </h1>
 
           <p className="mt-4 max-w-xl text-red-800">
