@@ -5,7 +5,7 @@ export default async function attractionsPage() {
   const supabase = await createServerSupabaseClient();
 
   const { data: attractions, error } = await supabase
-    .from("Attractions")
+    .from("attractions")
     .select("*")
     .order("featured", { ascending: false })
     .order("name", { ascending: true });
@@ -25,7 +25,7 @@ export default async function attractionsPage() {
           </h1>
 
           <p className="mt-4 max-w-xl text-red-800">
-            We couldn't load attraction data right now. Please try again
+            We couldn&apos;t load attraction data right now. Please try again
             shortly.
           </p>
 

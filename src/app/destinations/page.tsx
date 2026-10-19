@@ -25,7 +25,7 @@ export default async function DestinationsPage() {
           </h1>
 
           <p className="mt-4 max-w-xl text-red-800">
-            We couldn't load the destination data right now. Please try again shortly.
+            We couldn&apos;t load the destination data right now. Please try again shortly.
           </p>
 
           <Link
